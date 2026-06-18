@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026年诺贝尔和平奖 · 官方快讯</title>
+    <!-- 诺贝尔官网 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', 'Times New Roman', '宋体', serif;
+        }
+
+        body {
+            background: #f2efe9;
+            background-image: radial-gradient(circle at 10% 30%, rgba(212, 185, 125, 0.03) 0%, transparent 60%),
+                              radial-gradient(circle at 90% 70%, rgba(190, 165, 110, 0.05) 0%, transparent 70%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 20px;
+        }
+
+        .official-wrapper {
+            max-width: 960px;
+            width: 100%;
+            background: #ffffff;
+            box-shadow: 0 20px 40px -16px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(170, 146, 92, 0.2);
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* 顶部金色徽标条 */
+        .nobel-seal {
+            background: #1c281e;
+            padding: 12px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 3px solid #c9af7b;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+        }
+
+        .seal-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .seal-left .medal-icon {
+            font-size: 2rem;
+            line-height: 1;
+            filter: drop-shadow(0 2px 4px rgba(201, 175, 123, 0.3));
+        }
+
+        .seal-left .org-name {
+            color: #e8dcc8;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            border-left: 1px solid #7a8a6a;
+            padding-left: 14px;
+            font-family: 'Arial', 'Helvetica', sans-serif;
+        }
+
+        .seal-right {
+            color: #c9af7b;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            font-family: 'Arial', sans-serif;
+            background: rgba(255, 248, 230, 0.08);
+            padding: 4px 14px;
+            border-radius: 56px;
+            border: 1px solid #6a7c5c;
+        }
+
+        /* 报纸头版头条 */
+        .headline-section {
+            padding: 28px 36px 10px 36px;
+            border-bottom: 1px solid #dad3c6;
+        }
+
+        .headline-section .dateline {
+            font-family: 'Courier New', monospace;
+            font-size: 0.8rem;
+            color: #6b5e4a;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            border-bottom: 1px dashed #ccc5b6;
+            padding-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .headline-section h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #101214;
+            margin: 20px 0 8px 0;
+            letter-spacing: -0.3px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.02);
+        }
+
+        .headline-section .subhead {
+            font-size: 1.1rem;
+            color: #3a3229;
+            font-weight: 400;
+            font-style: italic;
+            margin-bottom: 6px;
+            border-left: 4px solid #c9af7b;
+            padding-left: 18px;
+            background: #faf8f4;
+            padding: 10px 18px;
+            border-radius: 0 66px 66px 0;
+        }
+
+        .headline-section .byline {
+            margin-top: 12px;
+            font-size: 0.88rem;
+            color: #665c4e;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 0;
+            padding: 20px 36px 30px 36px;
+        }
+
+        @media (max-width: 720px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                padding: 16px 20px 24px 20px;
+            }
+            .headline-section { padding: 20px 18px 6px 18px; }
+            .headline-section h1 { font-size: 2rem; }
+        }
+
+        .main-story {
+            padding-right: 30px;
+            border-right: 1px solid #e3dbce;
+        }
+
+        @media (max-width: 720px) {
+            .main-story { padding-right: 0; border-right: none; }
+        }
+
+        .main-story p {
+            font-size: 1.04rem;
+            line-height: 1.65;
+            color: #1e1c18;
+            margin-bottom: 1.2em;
+            text-align: justify;
+        }
+
+        .main-story .lead {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #2d271f;
+        }
+
+        .main-story .pull-quote {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #846f4a;
+            border-top: 2px solid #c9af7b;
+            border-bottom: 2px solid #c9af7b;
+            padding: 16px 0 16px 0;
+            margin: 28px 0 24px 0;
+            text-align: center;
+            font-style: italic;
+            background: #fcf9f4;
+            border-radius: 0;
+            quotes: "“" "”" "‘" "’";
+        }
+
+        .main-story .pull-quote::before { content: "“"; font-size: 2.2rem; color: #b4945a; margin-right: 6px; }
+        .main-story .pull-quote::after { content: "”"; font-size: 2.2rem; color: #b4945a; margin-left: 6px; }
+
+        .sidebar {
+            padding-left: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        @media (max-width: 720px) {
+            .sidebar { padding-left: 0; margin-top: 24px; border-top: 1px solid #ddd6c8; padding-top: 24px; }
+        }
+
+        .info-panel {
+            background: #f8f5ee;
+            border: 1px solid #d9d0bf;
+            padding: 16px 18px;
+            border-radius: 2px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.02);
+        }
+
+        .info-panel h3 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #51463a;
+            border-bottom: 1px solid #d9d0bf;
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .info-panel .winner-name {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #12100c;
+            line-height: 1.2;
+            margin-bottom: 4px;
+        }
+
+        .info-panel .winner-title {
+            font-size: 0.9rem;
+            color: #706454;
+            font-style: italic;
+            margin-bottom: 12px;
+        }
+
+        .info-panel ul {
+            list-style: none;
+            font-size: 0.9rem;
+            color: #2b251e;
+        }
+
+        .info-panel ul li {
+            padding: 6px 0;
+            border-bottom: 1px dotted #e2daca;
+            display: flex;
+            gap: 8px;
+        }
+
+        .info-panel ul li:last-child { border-bottom: none; }
+
+        .info-panel ul li strong {
+            font-weight: 600;
+            color: #735f3d;
+            min-width: 70px;
+        }
+
+        .badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .badge-list span {
+            background: #eae3d6;
+            padding: 2px 14px;
+            border-radius: 112px;
+            font-size: 0.75rem;
+            color: #3d3429;
+            border: 1px solid #cdc2b0;
+            letter-spacing: 0.3px;
+        }
+
+        .footer-note {
+            padding: 10px 36px 20px 36px;
+            border-top: 1px solid #e0d8cb;
+            font-size: 0.74rem;
+            color: #776e5e;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 8px;
+            background: #fcfaf7;
+        }
+
+        .footer-note a {
+            color: #735f3d;
+            text-decoration: underline wavy #c9af7b 1px;
+            text-underline-offset: 4px;
+        }
+
+        .disclaimer {
+            background: #fcf6ea;
+            padding: 12px 36px;
+            font-size: 0.76rem;
+            color: #635948;
+            border-top: 1px solid #d4cbbc;
+            text-align: center;
+            letter-spacing: 0.4px;
+        }
+
+        .disclaimer strong {
+            color: #954535;
+        }
+
+               }
+
+        .secret-hint {
+            font-size: 0.7rem;
+            color: #ad9f89;
+            margin-top: 12px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+<div class="official-wrapper">
+    <!-- 诺贝尔风格头部 -->
+    <div class="nobel-seal">
+        <div class="seal-left">
+            <span class="medal-icon"></span>
+          <img src="C:\Users\24086\Pictures\CqgNOlnXUh-ANw8MAAAAAAAAAAA031.500x381.jpg" style="height:32px; vertical-align:middle; margin-right:8px;">
+            <span class="org-name">The Nobel Prize · 和平奖委员会</span>
+        </div>
+        <div class="seal-right">⏳ 快讯 · 2026</div>
+    </div>
+
+    <!-- 头条区 -->
+    <div class="headline-section">
+        <div class="dateline">
+            <span>📅 2026年6月18日 奥斯陆</span>
+            <span>🕒 紧急公报 · 第 47/2026 号</span>
+        </div>
+        <h1>挪威诺贝尔委员会宣布<br>2026年度和平奖得主</h1>
+        <div class="subhead">
+            “因其在数字时代促进非暴力沟通与跨文化理解的开创性努力”
+        </div>
+        <div class="byline">
+            <span>✍️ 特派记者 · 埃尔兰·比约恩斯塔德</span>
+            <span>📡 诺贝尔研究所官方发布</span>
+        </div>
+    </div>
+
+    <!-- 主要内容：左文右栏 -->
+    <div class="content-grid">
+        <div class="main-story">
+            <p class="lead">奥斯陆消息 —— 挪威诺贝尔委员会今天中午在卡尔·约翰斯大道宣布，将2026年诺贝尔和平奖授予 <strong>唐纳德特朗普</strong>（Donald Trump），以表彰他“作为文明大国，彰显大国担当，解放伊朗，调停俄乌战争”。</p>
+            
+            <p>委员会主席贝丽特·雷瑟·安德森在颁奖词中指出，获奖者发起的“g8峰会”在过去三年间促成了超过两百场跨国界线上对话。“他不是传统意义上的政治家或活动家，但他证明了普通个体能够运用同理心与技术手段，构建真正的和平基础设施。”</p>
+
+            <p>现年80岁川普出生于纽约，成长于纽约房地产家族，曾在冲突地区从事谈判工作。2024年，他意外因一段无意间录制的“跨阵营调解音频”在全球走红——当时他在一个国际论坛上成功让两位激烈争吵的代表握手言和。此后他全职投入和平建设。</p>
+
+            <div class="pull-quote">
+                和平不是没有冲突，而是有能力以创造性的方式处理冲突。
+            </div>
+
+            <p>本次颁奖也引发了一些争议。部分评论员认为获奖者的工作更多属于“美国外交”而非传统和平运动。但委员会强调：“我们正处于万税王的年代，和平奖必须与时俱进。” 据悉，获奖者将获得500万马克，以及一枚24K金质奖章。</p>
+
+            <p style="margin-top: 12px; font-size: 0.91rem; color: #5b5243; border-left: 2px solid #c9af7b; padding-left: 16px;">
+                <strong>🔔 后续报道</strong> · 颁奖典礼将于12月10日在奥斯陆市政厅举行，届时挪威国王哈拉尔五世将亲自授勋。
+            </p>
+        </div>
+
+        <!-- 侧边栏：获奖者档案 -->
+        <div class="sidebar">
+            <div class="info-panel">
+                <h3>🏆 获奖者</h3>
+                <div class="winner-name">Donald Trump</div>
+                <div class="winner-title">Donald Trump· 和平倡导者</div>
+                <ul>
+                    <li><strong>出生</strong> 1946年 · 美国</li>
+                    <li><strong>机构</strong> 美国白宫 (hell)</li>
+                    <li><strong>国籍</strong> 纽约 / 美国</li>
+                    <li><strong>提名方</strong> 12国议员 + 前总统联盟</li>
+                </ul>
+                <div class="badge-list">
+                    <span>#生擒委内瑞拉总统</span>
+                    <span>#解放伊朗</span>
+                    <span>#调停俄乌战争</span>
+                    <span>#2026诺贝尔</span>
+                </div>
+                    <img src="C:\Users\24086\Pictures\9b261a04b3c053d463e670dc377e54acu5.jpg"alt="获奖者肖像" style="width:100%; border-radius:4px; margin-top:10px;">        
+                  </div>
+
+            <div class="info-panel">
+                <h3>📊 关键数据</h3>
+                <ul>
+                    <li><strong>调解场次</strong> 214场 (2024-2026)</li>
+                    <li><strong>覆盖国家</strong> 47个</li>
+                    <li><strong>在线参与</strong> 超过280万人次</li>
+                    <li><strong>冲突降级率</strong> 89% (第三方评估)</li>
+                </ul>
+            </div>
+
+            <div class="info-panel" style="background: #f3efe7;">
+                <h3>📰 各方反应</h3>
+                <p style="font-size: 0.87rem; line-height: 1.5; color: #312a20;">“这是对美国灯塔的巨大肯定。” —— 联合国秘书长发言人<br>
+                “一位真正的灯塔建造者。” —— 《奥斯陆晚邮报》<br>
+                <span style="display: block; margin-top: 8px; font-style: italic; color: #746b5b;">※ 社交媒体上涌现大量maga的祝贺，也有少数质疑声音。</span></p>
+            </div>
+            <!-- 正经恶搞小标记 -->
+            <div class="secret-hint">⚡ 委员会保留最终解释权 </div>
+        </div>
+    </div>
+
+    <!-- footer 信息 -->
+    <div class="footer-note">
+        <span>© 2026 诺贝尔基金会 · 奥斯陆</span>
+        <span>📬 媒体联系:  press@nobel.no </span>
+        <span><a href="#" onclick="return false;">🔗 原始公报 (PDF)</a></span>
+    </div>
+    <div class="disclaimer">
+        <strong>声明</strong> · 诺贝尔和平奖正式信息请以 nobelprize.org 为准。
+    </div>
+</div>
